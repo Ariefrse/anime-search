@@ -50,10 +50,10 @@ const AnimeDetailsPage: React.FC = () => {
   }
 
   return (
-    <div className="max-w-[1200px] mx-auto">
+    <div className="max-w-[1200px] mx-auto dark:bg-gray-800">
       <Link 
         to="/"
-        className="inline-flex items-center px-4 py-2 bg-[#FF69B4] text-white rounded-md hover:bg-[#FF91C8] transition-colors mb-6"
+        className="inline-flex items-center px-4 py-2 border border-purple-500 dark:bg-gray-900 text-purple-500 dark:text-gray-500 dark:border-gray-700 rounded-md hover:border-purple-400 hover:text-purple-400 dark:hover:bg-gray-950 dark:hover:text-gray-400 dark:hover:border-gray-600 transition-colors mb-6"
       >
         <ArrowLeft size={20} className="mr-2" />
         Back
@@ -69,8 +69,8 @@ const AnimeDetailsPage: React.FC = () => {
         </div>
         
         <div className="flex-grow">
-          <h2 className="text-xl font-semibold mb-4 text-gray-900">Synopsis</h2>
-          <p className="text-gray-700 mb-8 leading-relaxed">
+          <h2 className="text-xl font-semibold mb-4 text-black dark:text-gray-400">Synopsis</h2>
+          <p className="text-gray-700 mb-8 leading-relaxed dark:text-gray-500">
             {anime.synopsis || 'No synopsis available.'}
           </p>
 
@@ -91,9 +91,7 @@ const AnimeDetailsPage: React.FC = () => {
             </div>
             
             <div className="bg-[#E8F5E9] p-4 rounded-lg text-center">
-              <div className="text-2xl font-bold text-[#388E3C]">
-                {anime.members?.toLocaleString() || 'N/A'}
-              </div>
+              <div className="text-2xl font-bold text-[#388E3C]">{anime.members?.toLocaleString() || 'N/A'}</div>
               <div className="text-sm text-[#388E3C] mt-1">MEMBERS</div>
             </div>
           </div>

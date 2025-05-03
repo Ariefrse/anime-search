@@ -47,10 +47,8 @@ const Pagination: React.FC<PaginationProps> = ({
         <button
           onClick={() => onPageChange(currentPage - 1)}
           disabled={currentPage === 1}
-          className={`relative inline-flex items-center px-2 py-2 rounded-l-md border border-blue-300 bg-white text-sm font-medium
-            ${currentPage === 1 
-              ? 'text-gray-300 cursor-not-allowed' 
-              : 'text-gray-500 hover:bg-blue-50 cursor-pointer'}`}
+          className={`relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium
+            ${currentPage === 1 ? 'text-gray-300 cursor-not-allowed' : 'text-gray-500 hover:bg-gray-100 cursor-pointer dark:text-gray-400 dark:hover:bg-gray-800'} dark:border-gray-700 dark:bg-gray-900`}
         >
           <span className="sr-only">Previous</span>
           <ChevronLeft size={16} />
@@ -64,15 +62,15 @@ const Pagination: React.FC<PaginationProps> = ({
               aria-current={currentPage === page ? 'page' : undefined}
               className={`relative inline-flex items-center px-4 py-2 border text-sm font-medium
                 ${currentPage === page
-                  ? 'z-10 bg-blue-50 border-blue-500 text-blue-600'
-                  : 'bg-white border-blue-300 text-gray-500 hover:bg-blue-50'}`}
+                  ? 'z-10 bg-purple-50 border-purple-400 text-purple-600 hover:text-purple-800 dark:bg-gray-900 dark:border-purple-700 dark:text-purple-300 dark:hover:text-purple-400'
+                  : 'bg-white border-gray-300 text-gray-500 hover:bg-gray-100 dark:bg-gray-900 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-800'}`}
             >
               {page}
             </button>
           ) : (
             <span
               key={index}
-              className="relative inline-flex items-center px-4 py-2 border border-blue-300 bg-white text-sm font-medium text-gray-700"
+              className="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300"
             >
               {page}
             </span>
@@ -82,10 +80,8 @@ const Pagination: React.FC<PaginationProps> = ({
         <button
           onClick={() => onPageChange(currentPage + 1)}
           disabled={currentPage === totalPages}
-          className={`relative inline-flex items-center px-2 py-2 rounded-r-md border border-blue-300 bg-white text-sm font-medium
-            ${currentPage === totalPages 
-              ? 'text-gray-300 cursor-not-allowed' 
-              : 'text-gray-500 hover:bg-blue-50 cursor-pointer'}`}
+          className={`relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium
+            ${currentPage === totalPages ? 'text-gray-300 cursor-not-allowed' : 'text-gray-500 hover:bg-gray-100 cursor-pointer dark:text-gray-400 dark:hover:bg-gray-800'} dark:border-gray-700 dark:bg-gray-900`}
         >
           <span className="sr-only">Next</span>
           <ChevronRight size={16} />

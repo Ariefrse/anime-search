@@ -8,11 +8,11 @@ interface ErrorStateProps {
 const ErrorState: React.FC<ErrorStateProps> = ({ message }) => {
   return (
     <div className="flex flex-col items-center justify-center py-12 text-center">
-      <div className="bg-red-100 p-4 rounded-full mb-4">
-        <AlertTriangle size={40} className="text-red-500" />
+      <div className="bg-gray-100 p-4 rounded-full mb-4 dark:bg-gray-800">
+        <AlertTriangle size={40} className="text-gray-400" />
       </div>
-      <h3 className="text-xl font-semibold text-gray-900 mb-2">Oops! Something went wrong</h3>
-      <p className="text-gray-600 max-w-md mx-auto">{message}</p>
+      <h3 className="text-xl font-semibold text-black mb-2 dark:text-white">Oops! Something went wrong</h3>
+      <p className="text-gray-500 max-w-md mx-auto dark:text-gray-400">{message}</p>
     </div>
   );
 };

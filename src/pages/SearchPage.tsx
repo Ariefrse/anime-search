@@ -124,7 +124,7 @@ const SearchPage: React.FC = () => {
   };
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 dark:bg-gray-800">
       <div className="max-w-[1200px] mx-auto">
         <SearchBar query={query} setQuery={setQuery} />
       </div>
@@ -146,11 +146,11 @@ const SearchPage: React.FC = () => {
         <EmptyState />
       ) : (
         <div className="text-center py-20">
-          <h2 className="text-2xl font-semibold text-gray-700">
-            Search for your favorite anime!
+          <h2 className="text-2xl font-semibold text-gray-700 dark:text-gray-400">
+            Start searching for your favorite anime!
           </h2>
-          <p className="text-gray-500 mt-2">
-            Start typing in the search bar above to find anime.
+          <p className="text-gray-600 dark:text-gray-400 mt-2">
+            Use the search bar above to find anime by title, genre, or keyword.
           </p>
         </div>
       )}

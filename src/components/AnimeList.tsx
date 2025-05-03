@@ -14,7 +14,7 @@ const AnimeList: React.FC<AnimeListProps> = ({ animeList }) => {
         <Link 
           to={`/anime/${anime.mal_id}`} 
           key={anime.mal_id}
-          className="bg-white rounded-lg shadow-md hover:shadow-xl transform transition-all duration-300 hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-opacity-50"
+          className="bg-white rounded-lg shadow-md hover:shadow-xl transform transition-all duration-300 hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50 dark:bg-gray-900 dark:focus:ring-gray-600"
           style={{ width: '225px' }}
         >
           <div className="relative pb-[140%]">
@@ -32,10 +32,10 @@ const AnimeList: React.FC<AnimeListProps> = ({ animeList }) => {
             )}
           </div>
           <div className="p-3">
-            <h3 className="font-medium text-gray-900 mb-1 line-clamp-2 text-sm h-10">
+            <h3 className="font-medium text-black mb-1 line-clamp-2 text-sm h-10 dark:text-white">
               {anime.title}
             </h3>
-            <div className="flex justify-between items-center text-xs text-gray-500">
+            <div className="flex justify-between items-center text-xs text-gray-500 dark:text-gray-400">
               <span>{anime.type || 'Unknown'}</span>
               <span>{anime.episodes ? `${anime.episodes} eps` : 'Unknown eps'}</span>
             </div>
