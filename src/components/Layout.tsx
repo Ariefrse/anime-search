@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Outlet, Link } from 'react-router-dom';
-import { SearchIcon } from 'lucide-react';
+
 
 const Layout = () => {
   const [darkMode, setDarkMode] = useState(() => {
